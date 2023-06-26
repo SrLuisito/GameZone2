@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titulo e icono de la pestaña-->
+    <title>¡Bienvenidos a Sonata!</title>
+    <link rel="shortcut icon" href="/images/imagen_logo_sonata_v1.png">
+
+    <!--CDN FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/0aeb7696ea.js" crossorigin="anonymous"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="/css/styles_header.css">
+    <link rel="stylesheet" href="/css/styles_footer.css">
+    <link rel="stylesheet" href="/css/editProduct.css">
+
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+        <main>
+
+            <form class="form_productos" action="/product/<%=user.id %>/edit/<%=filtraAlbum.id %>?_method=PUT" method="post" enctype="multipart/form-data">
+                
+                <section class="contenedor_imagen" style="background-image: url('<%=filtraAlbum.image %>');background-size: cover; background-position: center center;">
+             
+                    <div class="contenedor_boton_imagen">
+                        <input type="file" name="imgPista" id="imagen_pista">
+                        <label for="imagen_pista"><i class="fa-solid fa-circle-plus"></i></label>
+                    </div>
+    
+                </section>
+                
+                <h2 class="titulo_formulario">Modificar pista</h2>
+                <section class="contenedor_formulario">
+                    <section class="formulario_superior">
+                        <div class="inputs_superiores">
+                            <div>
+                                <label for="nombre_pista">Nombre del álbum:</label>
+                                <input class="input_personalizado_barra" type="text" value="<%=filtraAlbum.name%>" name="nombrePista" id="nombre_pista">
+                            </div>
+    
+                            <div>
+                                <label for="genero_pista">Género:</label>
+                                <select class="list-generes" name="generes">
+                                    <option value="<%= filtraAlbum.genreAlbum.id %>" <%= filtraAlbum.genereIdFk == filtraAlbum.genreAlbum.id ? 'selected' : '' %>>
+                                        <%= filtraAlbum.genreAlbum.name %>
+                                    </option>
+
+                                    <option value="2" <%= filtraAlbum.genreAlbum.id == 2 ? 'selected' : '' %>>Pop</option>
+                                    <option value="3" <%= filtraAlbum.genreAlbum.id == 3 ? 'selected' : '' %>>Classic</option>
+                                    <option value="4" <%= filtraAlbum.genreAlbum.id == 4 ? 'selected' : '' %>>Electronic</option>
+                                    <option value="5" <%= filtraAlbum.genreAlbum.id == 5 ? 'selected' : '' %>>Hip-Hop</option>
+                                    <option value="6" <%= filtraAlbum.genreAlbum.id == 6 ? 'selected' : '' %>>Otro</option>
+
+                                </select>
+                            </div>
+                        </div>
+    
+                        <div class="inputs_inferiores">
+                            <label for="descripcion_pista">Descripción:</label>
+                            <textarea class="input_personalizado_fondo" name="descripcionProducto" id="descripcion_pista"><%=filtraAlbum.description%></textarea>
+                        </div>
+
+                        <div class="input_offer">
+                            <label for="oferta">Nivel de oferta: </label>
+                            <input type="range" id="offerLabel" name="oferta" min="0" max="70" value="<%=filtraAlbum.offerPercent%>">
+
+                            <p id="offerOutput"><%=filtraAlbum.offerPercent%></p>
+                        </div>
+
+                        <label class="boton_subir_imagen" for="imagen_pista">Modificar imagen<i class="fa-solid fa-circle-plus"></i></label>
+    
+                    </section>
+    
+    
+                    <section class="formulario_inferior">
+                        <div>
+                            <label for="precio_pista">Precio:</label>
+                            <input class="input_personalizado_barra" type="text" value="<%=filtraAlbum.price%>" name="nuevoPrecio" id="precio_pista">
+                        </div>
+    
+                        <div>
+                            <label for="moneda_pista">Moneda:</label>
+                            <select class="checkout-moneda" name="moneda">
+
+                                <option value="USD" <%= filtraAlbum.coin == 'USD' ? 'selected' : '' %>>USD</option>
+                                <option value="ARS" <%= filtraAlbum.coin == 'ARS' ? 'selected' : '' %>>ARS</option>
+                                <option value="EUR" <%= filtraAlbum.coin == 'EUR' ? 'selected' : '' %>>EUR</option>
+                            
+                            </select>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="botones_formulario">
+                    <button type="submit">Modificar</button>
+                    <a href="/">
+                        <button>Cancelar</button>
+                    </a>
+                </section>
+            </form>
+
+        </main>
+        <!--Footer-->
+        <%- include('../partials/footer') %>
+
+        <script src="/scripts/productos/offer.js"></script>
+</body>
+
+</html>

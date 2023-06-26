@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/imagen_logo_sonata_v1.png">
+    <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/styles_validaciones.css">
+    <title>Detalles de compra</title>
+</head>
+
+<body>
+
+    <main class="main-checkout">
+
+        <%- include('../partials/header') %>
+
+        <section class="contenedor_productos">
+
+            <section class="contenedor_total_producto">
+                <h4>PRECIO TOTAL:</h4>
+                <h4 class="precioTotalCarrito">$0.00</h4>
+            </section>
+
+            <!--Product list - mobile version-->
+            <section class="productos_carrito">
+
+            </section>
+
+        </section>
+
+        <!--Payiment method section-->
+        <section class="checkout-payment-method">
+
+            <div class="checkout-client-information">
+
+                <h2 class="titulares">Información del cliente</h2>
+
+                <form id="checkout-cart" class="checkout-form-container" action="" method="post">
+
+                    <div class="checkout-form-fields-user">
+                        <label class="label-forms" for="full_name">NOMBRE Y APELLIDO COMPLETO</label>
+                            <input type="text" id="full_name" name="full_name"   placeholder="Nombre completo"></input>
+                            <div class="error_nombre"> </div>
+                            <% if (locals.errors && errors.full_name) { %>
+                                <h6 style="color: red;"><%=errors.full_name.msg%></h6>
+                            <% } %>
+                        </div>
+
+
+                    <div class="checkout-form-email-country">
+                        <div class="form-fields-email">
+                            <label class="label-forms" for="email">DIRECCIÓN DE CORREO ELECTRÓNICO</label>
+                            <input type="email" id="email" name="email"   placeholder="Correo"></input>
+                            <div class="error_correo"> </div>
+                            <% if (locals.errors && errors.email) { %>
+                                <h6 style="color: red;"><%=errors.email.msg%></h6>
+                            <% } %>
+                        </div>
+                    </div>
+
+    
+                    <div class="checkout-form-fields-user-datos-tarjeta">
+                        <div class="header-checkout">
+                            <h2 class="titulares">Metodos de Pago</h2>
+            
+                            <div class="checkout-payiments-apps">
+                                <button id="tarjeta"></button>
+                                <button id="paypal"></button>
+                                <button id="modo"></button>
+                            </div>
+                        </div>
+
+                        <div class="modal-form-fields-user">
+                            <label class="label-forms" for="card_number">Número de tarjeta de débito/crédito:</label>
+                            <input type="number" id="card_number" name="card_number"  
+                                placeholder="0000 - 0000 - 0000 - 0000"></input>
+                                <div class="error_tarjeta"> </div>
+                                <% if (locals.errors && errors.card_number) { %>
+                                    <h6 style="color: red;"><%=errors.card_number.msg%></h6>
+                                <% } %>
+                        </div>
+    
+                        <div class="modal-form-date">
+                            <label class="label-forms" for="card_date">Fecha de expiración:</label>
+                            <input type="date" id="card_date" name="card_date"   placeholder="01/2024"></input>
+                            <div class="error_vencimiento"> </div>
+                            <% if (locals.errors && errors.card_date) { %>
+                                <h6 style="color: red;"><%=errors.card_date.msg%></h6>
+                            <% } %>
+                        </div>
+    
+                        <div class="modal-form-cvc">
+                            <label class="label-forms" for="card_cvc">CVC:</label>
+                            <input type="number" id="card_cvc" name="card_cvc"  ></input>
+                            <div class="error_codig"> </div>
+                            <% if (locals.errors && errors.card_cvc) { %>
+                                <h6 style="color: red;"><%=errors.card_cvc.msg%></h6>
+                            <% } %>
+                        </div>
+    
+                    </div>
+    
+                    <div class="checkout-buttons">
+    
+                        <button id="checkout-exit" onclick="closeModal()">Cancelar</button>
+                        <button id="checkout-continue" type="submit">PAGAR</button>
+                    </div>
+    
+
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="/scripts/script-checkout-modal.js"></script>
+    <script src="/scripts/carrito/carrito.js"></script>
+    <script src="/scripts/validaciones/validatorCompras.js"></script>
+</body>
+
+</html>

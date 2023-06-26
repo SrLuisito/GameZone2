@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titulo e icono de la pestaña-->
+    <title>Crear Álbum</title>
+    <link rel="shortcut icon" href="/images/imagen_logo_sonata_v1.png">
+
+    <!--CDN FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/0aeb7696ea.js" crossorigin="anonymous"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="/css/styles_header.css">
+    <link rel="stylesheet" href="/css/styles_footer.css">
+    <link rel="stylesheet" href="/css/editProduct.css">
+
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+        <main>
+
+            <section class="contenedor_imagen">
+
+                <div class="contenedor_boton_imagen">
+                    <label for="imagen_pista"><i class="fa-solid fa-circle-plus"></i></label>
+                </div>
+                <div class="error_imagen"></div>
+            </section>
+
+            <form class="form_productos" action="/product/create/album" method="POST" enctype="multipart/form-data">
+                <input type="file" name="imgPista" id="imagen_pista">
+                <h2 class="titulo_formulario">Subir Álbum</h2>
+
+                <section class="contenedor_formulario">
+
+                    <section class="formulario_superior">
+
+                        <div class="inputs_superiores">
+
+                            <div class="contenedor_input_nombre">
+                                <label for="nombre_pista">Nombre del Álbum:</label>
+                                <div>
+                                <input class="input_personalizado_barra" type="text" name="nombreAlbum" id="nombre_pista">
+                                <div class="errorNombre">
+                                </div>
+
+                                </div>
+                            </div>
+    
+                            <div class="contenedor_input_genero">
+
+                                <label for="genero_pista">Género:</label>
+                                <select class="list-generes" name="genere">
+                                    
+                                    <option value="Ninguno">
+                                        Ninguno
+                                    </option>
+
+                                    <option value="Rock">
+                                        ROCK
+                                    </option>
+                            
+                                    <option value="Pop">
+                                       POP
+                                    </option>
+                            
+                                    <option value="Classic">
+                                        CLÁSICA
+                                    </option>
+
+                                    <option value="Electronic">
+                                        ELECTRÓNICA
+                                    </option>
+
+                                    <option value="Hip-Hop">
+                                        HIP-HOP
+                                    </option>
+
+                                    <option value="Otro">
+                                        Otro
+                                    </option>
+
+                                </select>
+                                <div class="errorGenero"></div>
+                    
+                        </div>
+                        </div>
+
+                        <div class="inputs_inferiores">
+                            <label for="descripcion_pista">Descripción:</label>
+                            <textarea class="input_personalizado_fondo" name="descripcion_album" id="descripcion_pista"></textarea>
+                            <div class="error_descripcion"></div>
+                        </div>
+
+                        <label class="boton_subir_imagen" for="imagen_pista">Insertar imagen<i
+                                class="fa-solid fa-circle-plus"></i></label>
+
+                    </section>
+
+
+                    <section class="formulario_inferior">
+                        <div>
+                            <label for="precio_pista">Precio:</label>
+                            <input class="input_personalizado_barra" type="text" name="precio_album" id="precio_pista">
+                            <div class="error_precio"></div>
+                        </div>
+
+                        <div>
+                            <label for="moneda_pista">Moneda:</label>
+                            <select class="checkout-moneda" name="moneda">
+                                <option value="Ninguno" selected>
+                                    Ninguno
+                                </option>
+
+                                <option value="USD">
+                                    USD
+                                </option>
+                        
+                                <option value="ARS" >
+                                   ARS
+                                </option>
+
+                                <option value="EUR">
+                                    EUR
+                                </option>
+                            </select>
+                            <div class="error_moneda"></div>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="botones_formulario">
+                    <button type="submit">Crear</button>
+                    <button type="reset">Cancelar</button>
+                </section>
+            </form>
+
+        </main>
+        <!--Footer-->
+        <%- include('../partials/footer') %>
+
+        <script src="/scripts/validaciones/validatorCreateProduct.js"> </script>
+</body>
+
+</html>
