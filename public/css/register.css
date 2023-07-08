@@ -2,7 +2,7 @@
 @import url(styles_footer.css);
 
 body{
-    background-color: var(--marron_clarito);
+    background-color: black;
 }
 
 main{
@@ -19,7 +19,7 @@ main{
 .contenedor_registro{
     width: 400px;
     max-width: 90%;
-    background: var(--marron_medio);
+    background: white;
     position: relative;
     border-radius: 1rem;
     height: fit-content;
@@ -46,8 +46,8 @@ main{
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--marron_fuerte);
-    color: var(--marron_clarito);
+    background: rgb(244, 87, 48, 1);
+    color: white;
     width: 7rem;
     height: 7rem;
     display: flex;
@@ -72,11 +72,11 @@ input[type="submit"], input[type="reset"] {
     border-radius: 2rem;
     width: 40%;
     font-weight: bolder;
-    color: var(--marron_clarito);
+    color: white;
 }
 
 input[type="submit"]{
-    background-color: var(--naranja);
+    background-color: rgb(244, 87, 48, 1);
 }
 
 input[type="reset"]{

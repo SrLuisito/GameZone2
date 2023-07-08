@@ -6,7 +6,7 @@
 }
 
 .form-content{
-    background-color: var(--marron_clarito);
+    background-color: black;
 }
 
 .main-login{
@@ -49,7 +49,7 @@
 }
 
 .login-form-content{
-    background-color: #d9c6b0;
+    background-color: rgb(244, 87, 48, 1);
 }
 
 .login-form-content h1{
@@ -87,7 +87,7 @@
 
 .form-login-submit button{
     background-color: #0D0D0D;
-    color: #d9c6b0;
+    color: rgb(244, 87, 48, 1);
     padding: 10px 60px;
     border-radius: 20px;
     border: 4px;
@@ -127,7 +127,7 @@
 
 .login-register-section button{
     background-color: #0D0D0D;
-    color: #d9c6b0;
+    color: rgb(244, 87, 48, 1);
     padding: 10px 20px;
     border: none;
     border-top-right-radius:15px;

@@ -29,7 +29,7 @@
 
                     <div class="campo_formulario_registro">
                         <label for="user_name">Nombre de usuario: </label>
-                        <input placeholder="Ejemplo: Artemis402" id="user_name" name="user_name" type="text" value="<%=locals.oldData?oldData.user_name:null%>">
+                        <input placeholder="LuisAguero" id="user_name" name="user_name" type="text" value="<%=locals.oldData?oldData.user_name:null%>">
                         
                         <% if (locals.errors && errors.user_name) { %>
                             <h6 style="color: red;"><%=errors.user_name.msg%></h6>
@@ -38,7 +38,7 @@
 
                     <div class="campo_formulario_registro">
                         <label for="user_email">Correo electronico: </label>
-                        <input placeholder="Ejemplo: artemisIris@dominio.com" id="user_email" name="user_email" type="email" value="<%=locals.oldData?oldData.user_email:null%>">
+                        <input placeholder="LuisAguero@gmail.com" id="user_email" name="user_email" type="email" value="<%=locals.oldData?oldData.user_email:null%>">
                         
                         <% if (locals.errors && errors.user_email) { %>
                             <h6 style="color: red;"><%=errors.user_email.msg%></h6>
@@ -46,40 +46,9 @@
 
                     </div>
 
-                    <div class="campo_formulario_registro">
-                        <label for="client_fullname">Nombre completo: </label>
-                        <input id="client_fullname" placeholder="Ejemplo: Artemisa Iris Herrera" name="client_fullname" type="text" value="<%=locals.oldData?oldData.client_fullname:null%>">
-                        
-                        <% if (locals.errors && errors.client_fullname) { %>
-                            <h6 style="color: red;"><%=errors.client_fullname.msg%></h6>
-                        <% } %>
-                    </div>
 
-                    <div>
 
-                        <label for="userT">Tipo de usuario</label>
-                        <select class="list-users" name="typeUser" id="userT">
 
-                            <option value="client">
-                                CLIENTE
-                            </option>
-                    
-                            <option value="composer">
-                               SOY ARTISTA
-                            </option>
-
-                        </select>
-                    </div>
-
-                    <div class="campo_formulario_registro">
-                        <label for="user_image">Imagen de perfil: </label>
-                        <input type="file" name="user_image" id="user_image">
-                        
-                        <% if (locals.errors && errors.user_image) { %>
-                            <h6 style="color: red;"><%=errors.user_image.msg%></h6>
-                        <% } %>
-                        
-                    </div>
 
                     <div class="campo_formulario_registro">
                         <label for="user_password">Contraseña: </label>
@@ -99,38 +68,7 @@
 
                     </div>
 
-                    <div>
-
-                        <label for="genero_pista">Género:</label>
-                        <select class="list-generes" name="generes">
-
-                            <option value="rock">
-                                ROCK
-                            </option>
-                    
-                            <option value="pop">
-                               POP
-                            </option>
-                    
-                            <option value="classic">
-                                CLÁSICA
-                            </option>
-
-                            <option value="electronica">
-                                ELECTRÓNICA
-                            </option>
-
-                            <option value="hip-hop">
-                                HIP-HOP
-                            </option>
-
-                            <option value="otro">
-                                Otro
-                            </option>
-
-                        </select>
-                    </div>
-
+ 
 
                     <div class="campo_formulario_registro_botones">
                         <input type="submit" value="Registrarme">
