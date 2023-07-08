@@ -6,11 +6,13 @@
 }
 
 body{
-    background-color: var(--marron_clarito);
+    background-color: RGB(54, 57, 63)
+    ;
 }
 
 main{
-    background-color: var(--marron_clarito);
+    background-color: RGB(54, 57, 63)
+    ;
     margin-bottom: 50%;
 }
 
@@ -24,7 +26,8 @@ img{
 }
 
 .mobile-register-login{
-    background-color: var(--marron_medio);
+
+    background-color:RGB(54, 57, 63);
     padding: 4%;
     display: flex;
     flex-direction: column;
@@ -81,7 +84,8 @@ img{
 
 .article-about{
     width: 100%;
-    background-color: var(--marron_clarito);
+    background-color: RGB(54, 57, 63)
+    ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,7 +119,8 @@ img{
 }
 
 .article-description-container{
-    background-color: #d9c6b093;
+    background-color: RGB(54, 57, 63)
+    ;
     padding: 8%;
     border-radius: 10px;
 }
@@ -149,70 +154,6 @@ img{
 .article-team h3{
     text-align: center;
 }
-
-.card-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card-team{
-    margin: 5% 0;
-    width: 70%;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2%;
-    border-radius: 5%;
-    transition: background-color .5s ease-in-out;
-}
-
-.card-team img{
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    object-fit: cover;
-    overflow: hidden;
-}
-
-.card-description{
-    width: 100%;
-    margin: 2% 0;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-description h4{
-    margin-bottom: 2%;
-}
-
-.card-description p{
-    font-weight: 500;
-    font-size: 0.9rem;
-    margin-bottom: 2%;
-    overflow-wrap:break-word;
-}
-
-.card-description button{
-    width: 100%;
-    margin-top: 8%;
-    padding: 3% 0;
-    background-color: var(--negro);
-    border: none;
-    border-radius: 5px;
-    color: var(--marron_clarito);
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.card-rol{
-    font-style: italic;
-    text-decoration: underline;
-}
-
 
 p{
     font-size: 0.9rem;
