@@ -1,0 +1,65 @@
+@import url(general.css);
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 1.2rem;
+    padding: 2rem 0;
+    width: 100%;
+    background-color: var(--marron_fuerte);
+    color: var(--marron_clarito);
+    font-size: 1rem;
+    font-weight: 700;
+    
+}
+
+footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 2rem;
+}
+
+footer ul li a{
+    color: var(--marron_clarito);
+}
+
+.red_social{
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: var(--marron_clarito);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.red_social a{
+    color: var(--marron_fuerte);
+}
+
+.enlaces_informacion li:hover{
+    border-bottom: 3px var(--marron_clarito) solid;
+}
+
+@media (min-width:1024px){
+    footer{
+        font-size: 1.2rem;
+    }
+    .red_social{
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 1.8rem;
+    }
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+}

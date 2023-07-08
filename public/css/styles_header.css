@@ -1,0 +1,363 @@
+@import url(general.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,700;1,800;1,900&display=swap");
+
+/*------------------------*/
+header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  padding: 1.2rem;
+  background-color: var(--marron_fuerte);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  zoom: 0.8;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.fondo-transparente-header {
+  backdrop-filter: blur(100px);
+  background-color: unset;
+}
+.logo {
+  width: 140px;
+  margin-left: 20px;
+}
+
+label .boton_menu {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.btn-carrito,
+.btn-home {
+  margin: 0 10px;
+}
+
+.btn-carrito{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart_number{
+  margin: 0 0.5rem;
+  background: var(--marron_clarito);
+  color: var(--marron_medio);
+  padding: 0 0.2rem;
+  border-radius: 5px;
+
+}
+
+
+.nav-menu li a {
+  color: var(--marron_clarito);
+}
+
+
+/*BUSCADOR*/
+.formulario_buscador {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+}
+
+.campo_formulario {
+  width: 70%;
+  border-radius: 2rem;
+  height: 2.1rem;
+  background-color: var(--marron_clarito);
+  padding: 0.6rem;
+  border-radius: 2rem 0rem 0rem 2rem;
+  border: 3px var(--naranja) solid;
+  border-right: none;
+  outline: none;
+}
+
+.boton_formulario {
+  width: 25%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.6rem;
+  border:none;
+  cursor: pointer;
+  color: var(--marron_clarito);
+  background-color: transparent;
+  margin-left: 20%;
+} /*FIN DE DESARROLLO DEL BUSCADOR*/
+
+.fa-solid.fa-magnifying-glass {
+  font-size: 20px;
+}
+
+.btn-usuario-x i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--marron_clarito);
+  font-size: 1rem;
+  background-color: var(--naranja);
+  border-radius: 100%;
+}
+
+.border-btn-user {
+  transition: border 0.1s ease-in;
+  border-radius: 100%;
+  border: 4px var(--marron_clarito) solid;
+}
+
+.icono-home {
+  display: none;
+}
+
+.submenu-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  border-radius: 0.4rem;
+}
+
+.submenu-container.visible {
+  max-height: 500px; /* Ajusta el valor según el contenido máximo del submenú */
+  transition: max-height 0.5s ease-in-out;
+}
+
+.submenu-container .menu-boton {
+  padding: 0.5rem;
+  background-color: #993f1fc7;
+}
+
+.menu_desplegable {
+  position: fixed;
+  background-color: #d95a4ef2; /*Alternativa: #8c3a27a6*/
+  height: 100%;
+  width: 0;
+  z-index: 100;
+  top: 80px;
+  right: 0;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.contenedor_menu_desplegable {
+  height: fit-content;
+  overflow: auto;
+  padding: 0 0.6rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.visible_menu {
+  width: 20rem;
+}
+
+.imagen_de_usuario {
+  width: 50px;
+}
+
+.contenedor_imagen_de_usuario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.usuario_datos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.usuario_datos h2 {
+  font-size: 1.2rem;
+}
+
+.contenedor_usario_datos {
+  padding: 0.6rem;
+  background: var(--marron_clarito);
+  border-radius: 1rem 1rem 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.ancho_contenedor_usario_datos {
+  width: 100%;
+}
+
+.lista_navegacion {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  position: relative;
+  height: 70%;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.submenu-boton {
+  padding: 0.2rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: var(--marron_fuerte);
+  color: var(--marron_clarito);
+  font-weight: 900;
+}
+
+.submenu-boton #submenu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.arrow-movimiento {
+  transform: rotate(180deg);
+}
+.menu-boton {
+  background: #4d0f00a3;
+  color: var(--marron_fuerte);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contenedor_menu_desplegable ul::-webkit-scrollbar {
+  width: 10px;
+}
+
+.logout {
+  width: fit-content;
+  padding: 0.6rem 2rem;
+  margin: 1rem 0;
+  background: #292929;
+  font-size: 1rem;
+}
+
+.menu-boton a {
+  color: var(--marron_clarito);
+}
+
+.buscador_menu_desplegable {
+  display: none;
+}
+li.menu-boton.buscador_menu_desplegable{
+  text-align: center;
+}
+/*MEDIA QUERYS PARA ADAPTARSE A TAMAÑOS DE PANTALLAS*/
+
+/* Escritorio grande */
+@media only screen and (min-width: 650px) and (max-width: 1600px) {
+  .visible_menu {
+    width: 20rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    height: fit-content;
+    right: 20px;
+  }
+  .contenedor_menu_desplegable {
+    height: fit-content;
+  }
+  .contenedor_menu_desplegable ul {
+    display: none;
+  }
+}
+
+/*tablet */
+@media only screen and (min-width: 501px) and (max-width: 649px) {
+  .visible_menu {
+    width: 50%;
+    padding: 1rem;
+    border-radius: 1rem 0 0 0;
+    overflow: auto;
+    height: 87vh;
+  }
+  .btn-carrito,
+  .btn-home {
+    display: none;
+  }
+
+  .nav-menu li form {
+    width: 20rem;
+  }
+}
+
+/* Teléfonos */
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+  .visible_menu {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+    overflow: auto;
+    height: 87vh;
+  }
+
+  .btn-carrito,
+  .btn-home {
+    display: none;
+  }
+
+  /*Barra de navegación*/
+  .nav-menu li form {
+    width: 100%;
+  }
+  .presentacion_productos {
+    display: none;
+  }
+  .nav-menu {
+    gap: unset;
+    width: 50%;
+  }
+
+  /*Buscador en menu desplegable*/
+  .btn-busqueda {
+    width: 100%;
+  }
+
+  .invisible-navegacion {
+    display: none;
+  }
+  
+  .buscador_menu_desplegable{
+    display: block;
+  }
+  .btn-busqueda{
+    display: none;
+  }
+  
+}
