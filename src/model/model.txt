@@ -1,3 +1,0 @@
-Model - Modelo
-
-Es el encargado de los datos (Desde una base de datos) y de la logica para mostrar esos datos
