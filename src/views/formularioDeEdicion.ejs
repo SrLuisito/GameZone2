@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head") %>
+    
+    <title>Editar producto</title>
+</head>
+<body class="body-home">
+    <%- include("partials/header") %>
+    
+    <div class="formulario-carga">
+        <h1>Formulario de edición</h1>
+        <form action="/product-detail/<%=product.id%>?_method=PUT" method="POST">
+            <label for="name">
+                Nombre del producto
+                <input type="text" id="name" value="<%=product.productName%>" name="productName">
+            </label>
+            <label for="description">
+                Descripción
+                <textarea name="description" id="description"><%=product.description%></textarea>
+            </label>
+            <label for="">
+                Caracteristicas
+                <textarea name="characteristics"><%=product.characteristics%></textarea>
+            </label>
+            <label for="">
+                Precio
+                <input value="<%=product.price%>" name="price" type="number">
+            </label>
+            <label for="">
+                Descuento
+                <input value="<%=product.discount%>" name="discount" type="number">
+            </label>
+            <label for="">
+                Categoria
+                <select name="category" id="">
+                    <option value="guitarra">Guitarra</option>
+                    <option value="Bajos">Bajos</option>
+                    <option value="percusion">Percusión</option>
+                    <option value="cuerdas-frotadas">Cuerdas Frotadas</option>
+                    <option value="microfonos">Microfonos</option>
+                </select>
+            </label>
+            <div class="btn-enviar-carga">
+                <input type="submit" name="Enviar" id="" value="Editar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

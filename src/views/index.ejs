@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Head-->
+<head>
+    <%- include("partials/head") %>
+    <title>Dh Music Store</title>
+</head>
+
+<body class="body-home">
+    <!--Header-->
+    <%- include("partials/header") %>
+
+    <main class="main-home">
+        <h2 class="best-seller">Lo más vendido</h2>
+        <% for (let i=0; i < products.length; i++){%>
+        <div class="article-box">
+            <a class="article-link" href="product-detail/<%=products[i].id%>">
+            <img class="article-box_img" src="./images/<%=products[i].img%>" alt="article">
+            <div class="article-box_description">
+                <h3 class="article-title">
+                    <%= products[i].productName%>
+                </h3>
+                <div class="article-price">
+                    <p class="article-price_sale">
+                        $<%=products[i].price - (products[i].price * products[i].discount / 100)%>
+                    </p>
+                    <p class="article-price_original">
+                        $<%=products[i].price%>
+                    </p>
+                </div>
+                <p class="article-state">
+                    Disponible
+                </p>
+            </div>
+            </a>
+        </div>
+        <% } %>
+
+
+        
+
+        <h2 class="best-seller">Mejores promociones</h2>
+        
+        <div class="article-box">
+            <img class="article-box_img" src="./images/guitarra1.jpeg" alt="article">
+            <div class="article-box_description">
+                <h3 class="article-title">
+                    Guitarra de prueba # 1
+                </h3>
+                <div class="article-price">
+                    <p class="article-price_sale">
+                        200.000 cop
+                    </p>
+                    <p class="article-price_original">
+                        250.000 cop
+                    </p>
+                </div>
+                <p class="article-state">
+                    Disponible
+                </p>
+            </div>
+        </div>
+        
+
+        <div class="article-box">
+            <img class="article-box_img" src="./images/guitarra2.jpeg" alt="article">
+            <div class="article-box_description">
+                <h3 class="article-title">
+                    Guitarra de prueba # 2
+                </h3>
+                <div class="article-price">
+                    <p class="article-price_sale">
+                        280.000 cop
+                    </p>
+                    <p class="article-price_original">
+                        300.000 cop
+                    </p>
+                </div>
+                <p class="article-state">
+                    Disponible
+                </p>
+            </div>
+        </div>
+
+
+        <h2 class="best-seller">Nuestras marcas</h2>
+    </main>
+
+    <!--footer-->
+    <%- include("./partials/footer") %>
+
+</body>
+</html>
