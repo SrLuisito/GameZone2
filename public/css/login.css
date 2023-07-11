@@ -1,0 +1,124 @@
+/*LOGIN-----------------------------------------------------------------------------------------*/
+.body-login {
+    display: flex;
+    align-items: center;
+    background-color: var(--text-color);
+    justify-content: space-evenly;
+    background-image: url("../images/instru.png");
+  }
+  .ingresar-login {
+    display: inline-flex;
+    color: white;
+    justify-content: flex-start;
+  }
+  
+  .formulario-login {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: var(--bg-color);
+    padding: 20px;
+    margin-top: 5vw;
+    border-radius: 3px;
+    box-shadow: 7px 13px 37px #000;
+    
+  }
+  .formulario-login label {
+    padding: 10px;
+    color: white;
+  }
+  .relleno-login {
+    padding: 10px;
+    border-radius: 3px;
+    border-color: var(--logo-color);
+    margin-bottom: 3px;
+    color: white;
+    background-color: var(--bg-color);
+  }
+  
+  .imagen-login {
+    display: inline-flex;
+    width: 35%;
+  }
+  .todo-login {
+    width: 100%;
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .boton-enviarlogin {
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    border: none;
+  }
+  .olvide-login {
+    text-decoration: none;
+    color: var(--logo-color);
+    margin-bottom: 5px;
+  }
+  
+  /*register--------------------------*/
+  .create-form {
+    width: 400px;
+    padding: 20px 15px;
+    border-radius: 4px;
+    font-family: "calibri";
+    border: solid 1px black;
+    background-color: #303841;
+    color: white;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    box-shadow: 7px 13px 37px #000;
+  }
+  .create-form h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .control-form {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .control-form label {
+    margin-bottom: 5px;
+    font-style: "calibri";
+    display: block;
+  }
+  .control-form p {
+    height: 15px;
+    text-align: center;
+    font-size: 18px;
+    margin: 9px;
+  }
+  .control-form a {
+    color: white;
+    text-decoration: none;
+  }
+  .control-form a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  .control {
+    width: 100%;
+    padding: 10px;
+    background: #303841;
+    border-radius: 4px;
+    border: 1px solid #00adb5;
+    font-family: "calibri";
+    font-size: 18px;
+  }
+  .create-form .button {
+    width: 100%;
+    background-color: #1f53c5;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px 0;
+    border-radius: 5px;
+    align-self: center;
+  }
