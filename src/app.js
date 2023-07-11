@@ -31,7 +31,7 @@ app.use(express.json())
 //servidor localhost:3010
 let puerto = 3010;
 app.listen(puerto, ()=>{
-    console.log("servidor corriendo en el puerto " + puerto) 
+    console.log("http://localhost:" + puerto) 
 })
 
 //rutas
