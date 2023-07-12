@@ -1,9 +1,9 @@
 /*Paleta de colores header*/
 
 :root {
-  --bg-color: #303841;
-  --logo-color: black;
-  --text-color: #3a4750;
+  --bg-color: black;
+  --logo-color: #f55630;
+  --text-color: black;
   --bg-color-2: #eeeeee;
   --bg-color-3: #9acfcf;
   --shadow: 7px;
@@ -286,7 +286,7 @@
 .carrito-fondo{
   width: 90%;
   margin: auto;
-  background-color: #c3c3c3;
+  background-color: #f55630;
   padding: 20px;
   box-shadow: 0px 5px 20px black;
   
@@ -295,7 +295,7 @@
 .carrito-titulo {
   padding-top: 10px;
   padding-left: 6%;
-  color: #fff;
+  color: white;
   text-shadow: 3px 3px 4px black; 
   font-size: 48px;
   margin-bottom: 10px;
@@ -346,7 +346,7 @@ img.acustica1 {
 .carrito-eliminar {
   width: 58px;
   height: 24px;
-  background-color: #303841;
+  background-color: black;
   color: white;
   padding: 4px 8px;
   text-decoration: none;
@@ -356,7 +356,7 @@ img.acustica1 {
 .carrito-comprar {
   width: 58px;
   height: 24px;
-  background-color: #303841;
+  background-color: black;
   color: white;
   padding: 3px;
   text-align: center;
@@ -365,7 +365,7 @@ img.acustica1 {
   margin-right: 10px;
 }
 .carrito-button {
-  background-color: #303841;
+  background-color: black;
   color: white;
   padding: 4px 8px;
   text-decoration: none;
@@ -374,7 +374,7 @@ img.acustica1 {
 }
 
 .carrito-button:hover {
-  background-color: #303841e0;
+  background-color: black;
 }
 
 .carrito-total {
