@@ -6,7 +6,7 @@
       "description": "XBOX SERIES X - XBOX ONE",
       "characteristics": "",
       "discount": "",
-      "img": "1650598659143img.png"
+      "img": "juego1.jpg"
     },
     {
       "id": 1650598397777,
@@ -15,7 +15,7 @@
       "description": "XBOX 360",
       "characteristics": "",
       "discount": "",
-      "img": "1650598397758img.png"
+      "img": "juego2.jpg"
     },
     {
       "id": 1650598077740,
@@ -24,7 +24,7 @@
       "description": "XBOX ONE",
       "characteristics": "\r\n",
       "discount": "",
-      "img": "1650598077712img.png"
+      "img": "juego3.jpg"
     },
     {
       "id": 1650597866128,
@@ -33,7 +33,7 @@
       "description": "XBOX 360",
       "characteristics": "",
       "discount": "",
-      "img": "1650597866102img.png"
+      "img": "juego4.jpg"
     },
     {
       "id": 1650597593857,
@@ -42,11 +42,11 @@
       "description": "XBOX 360",
       "characteristics": "",
       "discount": "",
-      "img": "1650597593835img.png"
+      "img": "juego5.jpg"
     },
     {
       "id": 1650596847876,
-      "img": "1650596847848img.png",
+      "img": "juego6.jpg",
       "productName": "FALLOUT 76",
       "price": "3500",
       "description": "XBOX ONE",
@@ -55,7 +55,7 @@
     },
     {
       "id": 1647989836799,
-      "img": "1647989836795img.jpeg",
+      "img": "juego9.jpg",
       "productName": "Darkness",
       "price": "2000",
       "description": "XBOX 360",
@@ -64,7 +64,7 @@
     },
     {
       "id": 1647989581066,
-      "img": "1647989581064img.jpg",
+      "img": "juego10.jpg",
       "productName": "Legendary",
       "price": "2500",
       "description": "XBOX 360",
@@ -79,7 +79,7 @@
       "description": "XBOX 360",
       "characteristics": "",
       "category": "aventura",
-      "img": "guitarra1.jpeg"
+      "img": "juego12.jpg"
     }
   ]
   
