@@ -25,7 +25,7 @@ const validation = require("../middlewares/itemsValidator");
 
 router.get("/", mainController.index);
 router.get("/create",mainController.cargaGet);
-router.get("/product-detail/:id",mainController.details);
+router.get("/productos-detail/:id", mainController.details);
 
 
 router.get("/register", mainController.register);

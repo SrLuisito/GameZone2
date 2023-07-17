@@ -1,16 +1,16 @@
 // modulos express y path
-
 const express = require("express");
 const session = require("express-session")
 const path = require("path");
 const methodOverride =  require('method-override');
 const cookies = require("cookie-parser")
-
+const cors = require("cors")
 const app = express();
 
 const menuLoginProfile = require("./middlewares/menuLoginProfile");
 
 //carpeta estatica public y ejs
+app.use(cors())
 app.use(session({
     secret: "shh",
     resave: false,
@@ -41,7 +41,7 @@ const userRouters = require('./routers/usersRouter')
 //vinculos de cada página
 app.use("/", mainRouters);
 app.use("/user", userRouters);
-
+app.use('/api',require('./routers/apiRoutes'))
 
 
 

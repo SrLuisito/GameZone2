@@ -9,7 +9,7 @@
     <!--Header-->
     <%- include("partials/header") %>
     <div class="body-productdetails">
-        <h2 class="titulo-detalle-producto"><%=product.productName%></h2>
+        <h2 class="titulo-detalle-producto"><%=product.nombre%></h2>
         <section class="detalles-producto">
             <section class ="imagenes-producto">
                 <img class ="imagen-principal" src="/images/<%=product.img%>" alt="">
@@ -18,7 +18,7 @@
                 </div>
             </section>
             <section class ="descripcion-del-producto">
-                <h3 class="relleno-descripcion precio-detalles">$<%=product.price - (product.price * product.discount / 100)%><p>$<%=product.price%></p></h3>
+                <h3 class="relleno-descripcion precio-detalles">$<%=product.precio%></p></h3>
                 <div class="despliegue-opciones">
                     <details>
                         <summary>
@@ -35,7 +35,7 @@
                             <h3 class="relleno-descripcion opcion-detalles">Caracteristicas <i class="fa-solid fa-arrow-down"></i></h3>
                         </summary>  
                         <ul class="relleno-descripcion opcion-descripcion">
-                            <li><%=product.characteristics%></li>
+                            <li><%=product.desciption%></li>
                         </ul>
                     </details>
                 </div>
@@ -58,16 +58,15 @@
         </section>
         
     </div>
-    <% for (let i=0; i < products.length; i++){
-        if(products[i].id != id){
-            let otro = i++;%>
+    <% for (let i=0; i < product.length; i++){ %>
+        <% if(product[i].id != id){ %>
+           <% let otro = i++;%>
         <section class="barra-siguiente-instrumento">
-            <a href="/product-detail/<%=products[otro].id%>"><i class="far fa-arrow-alt-circle-left"></i></a>
+            <a href="/product-detail/<%=product[otro].id%>"><i class="far fa-arrow-alt-circle-left"></i></a>
             <h2>Ver otro instrumento</h2>
-            <a href="/product-detail/<%=products[otro].id%>"><i class="far fa-arrow-alt-circle-right"></i></a>
+            <a href="/product-detail/<%=product[otro].id%>"><i class="far fa-arrow-alt-circle-right"></i></a>
         </section>
         <% }} %>
-        <!--footer-->
     <%- include("./partials/footer") %>
 
         <section class="footer-product">

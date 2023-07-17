@@ -3,15 +3,15 @@
 <!--Head-->
 <head>
     <%- include("../partials/head") %>
-    <title>Bienvenido <%= user.userName %></title>
+    <title>Bienvenido <%= user.username %></title>
 </head>
 <body class="body-product">
     <!--Header-->
     <%- include("../partials/header") %>
     
     <section class="userName">
-        <h1>Hola <%= user.userName %></h1>
-        <img src="/images/users/<%=user.img%>" alt="">
+        <h1>Hola <%= user.username %></h1>
+        <img src="/images/<%=user.img%>" alt="">
         <div class="btn-logout">
             <a href="/user/logout">Logout</a>
         </div>

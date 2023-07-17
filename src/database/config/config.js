@@ -1,23 +1,26 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "asdf1234",
+    "password": null,
     "database": "gamezone",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatoAliases": false
   },
   "test": {
     "username": "root",
-    "password": "asdf1234",
+    "password": null,
     "database": "gamezone",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatoAliases": false
   },
   "production": {
     "username": "root",
-    "password": "asdf1234",
+    "password": null,
     "database": "gamezone",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatoAliases": false
   }
 }
