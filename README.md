@@ -24,8 +24,7 @@
 
 -Luis Agüero
 -Gabriel Benitez
--Maximo Moises
--Renzo Payal
+
 
 ---
 
