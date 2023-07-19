@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head-->
+<head>
+    <%- include("partials/head") %>
+    <title>Ingresar</title>
+    
+</head>
+<body class="body-login">
+    <!--Header-->
+    <%- include("partials/header") %>
+    <div class="todo-login">
+    <!--<img class="imagen-login" src="./images/instru.png" alt="instrumentos">-->
+    <form class="formulario-login" action="/user/login" method="POST">
+        <h2 class="ingresar-login"><b>Ingresar</b></h2><br>
+        <label for="usuario">Correo:</label>
+        <input class="relleno-login" type="email" name="email" id="usuario" placeholder="Ingrese su email">
+        <% if(locals.errors && errors.email){ %>
+            <p class="text-danger"><%=errors.email.msg%></p>
+        <% } %>
+        <label for="contraseña">Contraseña:</label>
+        <input class="relleno-login" type="password" name="password" id="contraseña" placeholder="Ingrese su contraseña">
+        <% if(locals.errors && errors.password){ %>
+            <p class="text-danger""><%=errors.password.msg%></p>
+        <% } %>
+        <label for="recordarme"> 
+            <input type="checkbox" name="recordarme" id="recordarme">
+            Recordar mi usuario
+        </label>
+        
+        <input class=" boton-enviarlogin" type="submit" >
+        <input class=" boton-enviarlogin" type="reset">
+        
+        <input class="boton-enviarlogin" type="button" value="Crear cuenta">     
+
+    </form>
+    </div>
+</body>
+</html>

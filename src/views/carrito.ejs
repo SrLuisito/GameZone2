@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Head-->
+<head>
+    <%- include("partials/head") %>
+    <title>Carrito de Compras</title>
+</head>
+<!--Header-->
+<%- include("partials/header") %>
+<body>
+    
+    <main class="container-carrito">
+        <section class="section-carrito">
+            <div class="carrito-fondo">
+                <h1 class="carrito-titulo">Carrito</h1>
+                
+                <div class="carrito-compras">
+                      
+                    <div class="info">
+                        <div class="segundo">
+
+                            <div><img class="acustica1" src="./images/juego2.JPG" alt="violin1"></div>
+                            <div class="carrito-descripcion"></div>
+                            <div class="carrito-precio">
+                                <h3>Precio</h3>
+                                <div >3500</div>
+                            </div>
+                        </div>   
+                            <div>
+                                <label class="carrito-button">Cantidad
+                                <select name="cantidad">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                </label>
+                            </div>
+                            <button class="carrito-comprar">comprar</button>    
+                        <div class="carrito-eliminar">Eliminar</div>
+                        
+                            
+                    </div>
+                    <div class="carrito-total">Total 3500</div>
+                    <br>
+                    <div class="info">
+                        <div class="segundo">
+
+                            <div><img class="acustica1" src="./images/juego1.JPG" alt="acustica1"></div>
+                            <div class="carrito-descripcion"></div>
+                            <div class="carrito-precio">
+                                <h3>Precio</h3>
+                                <div >3500</div>
+                            </div>
+                        </div>   
+                            <div>
+                                <label class="carrito-button">Cantidad
+                                <select name="cantidad">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                </label>
+                            </div>
+                            <button class="carrito-comprar">comprar</button>
+                            <button class="carrito-eliminar">Eliminar</button>
+                            
+                    </div>
+                    <div class="carrito-total">Total 3500</div>
+                </div> 
+                 
+            </div> 
+           
+        </section>
+        
+        
+    </main>
+</body>
+<!--footer-->
+<%- include("./partials/footer") %>
+
+</html>

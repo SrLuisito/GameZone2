@@ -1,0 +1,46 @@
+<header class="header-home">
+    <div class="top-bar">
+        <a class="hamburger-button" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <a class="logo-link" href="/"><img class="top-bar_logo" src="/images/image.jpg" alt="Logo"></a>
+        <div class="seeker">
+            <form class="seeker-form" action="/" method="get">
+                <input class="seeker_input" type="text" name="search" placeholder="Buscar un juego">
+                <div class="magnifying">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+            
+        </div>
+        <div class="login-menu">
+            <ul class="login-menu_list">
+                <% if(locals.isLogged){ %>
+                    <li><a class="register-link profile-link" href="/user">
+                        <img src="/images/<%=locals.userLogged.img%>" alt="">
+                        <span> Hola <%= locals.userLogged.username %></span>
+                    </a></li>
+                <%}else{%>
+                    <li><a class="register-link" href="/user/login">Ingresar</a></li>
+                    <li><a class="register-link" href="/user/create"> Registrarse</a></li>
+                <%}%>
+                
+            </ul>
+        </div>
+        <div class="basket">
+            <% if(locals.isLogged){ %>
+            <a href="/create"><i class="fa-solid fa-plus"></i></a>
+            <%}%>
+            <a href="/carrito"><i class="fas fa-shopping-basket"></i></a>
+        </div>
+    </div>
+    <nav class="nav-bar">
+        <ul class="nav-bar_list">
+            <li>PS3</li>
+            <li>ps4</li>
+            <li>xbox 360</li>
+            <li>xbox one</li>
+            <li>wii</li>
+        </ul>
+    </nav>
+</header>

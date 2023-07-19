@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Head-->
+<head>
+    <%- include("partials/head") %>
+    <title>Game Zone</title>
+</head>
+
+<body class="body-home">
+    <!--Header-->
+    <%- include("partials/header") %>
+
+    <main class="main-home">
+        <h2 class="best-seller">Lo más vendido</h2>
+        <% for (let i=0; i < productos.length; i++){%>
+        <div class="article-box">
+            <a class="article-link" href="/productos-detail/<%= productos[i].id %>">
+            <img class="article-box_img" src="./images/<%=productos[i].img%>" alt="article">
+            <div class="article-box_description">
+                <h3 class="article-title">
+                    <%= productos[i].nombre%>
+                </h3>
+                <div class="article-price">
+                    <p class="article-price_sale">
+                        $<%=productos[i].precio%>
+                    </p>
+                    <p class="article-price_original">
+                        $<%=productos[i].precio%>
+                    </p>
+                </div>
+                <p class="article-state">
+                    Disponible
+                </p>
+            </div>
+            </a>
+        </div>
+        <% } %>
+
+
+        
+
+        <h2 class="best-seller">Mejores promociones</h2>
+        
+        <div class="article-box">
+            <img class="article-box_img" src="./images/juego8.JPG" alt="article">
+            <div class="article-box_description">
+                <h3 class="article-title">
+                    God Of War
+                </h3>
+                <div class="article-price">
+                    <p class="article-price_sale">
+                        2000 ars 
+                    </p>
+                    <p class="article-price_original">
+                        4000 ars
+                    </p>
+                </div>
+                <p class="article-state">
+                    Disponible
+                </p>
+            </div>
+        </div>
+        
+
+        <div class="article-box">
+            <img class="article-box_img" src="./images/juego7.JPG" alt="article">
+            <div class="article-box_description">
+                <h3 class="article-title">
+                    ASSASSIN`S CREED III
+    
+                </h3>
+                <div class="article-price">
+                    <p class="article-price_sale">
+                        2800 ars
+                    </p>
+                    <p class="article-price_original">
+                        3000 ars
+                    </p>
+                </div>
+                <p class="article-state">
+                    Disponible
+                </p>
+            </div>
+        </div>
+
+
+  
+    </main>
+
+    <!--footer-->
+    <%- include("./partials/footer") %>
+
+</body>
+</html>
