@@ -5,7 +5,7 @@ module.exports = {
       where: req.body,
       attributes: ["id", "nombre", "descuento", "precio", "clase_id"],
     });
-    
+
     listProductsDetails = listProduct.map((product) => ({
       id: product.id,
       name: product.nombre,
@@ -13,7 +13,7 @@ module.exports = {
       category: product.clase_id,
       detail: `/api/productos/${product.id}`,
       descuento: product.descuento,
-      precio: product.precio
+      precio: product.precio,
     }));
 
     let listCategory = await db.Clase.findAll(req.body, {
@@ -39,14 +39,14 @@ module.exports = {
 
   search: async (req, res) => {
     const producto = await db.Producto.findByPk(req.body.id, {
-      attributes: ["id", "nombre", "descuento", "precio", "clase_id"],
-    });    
+      attributes: ["id", "nombre", "descuento", "precio", "category"],
+    });
 
     const listCategory = await db.Clase.findAll();
 
     let categoryProduct = [];
     let categoryType = listCategory.filter(
-      (name) => name.id == producto.clase_id
+      (name) => name.id == producto.category
     );
 
     categoryProduct.push(categoryType[0].nombre);
@@ -55,8 +55,8 @@ module.exports = {
       product: producto,
       category: categoryProduct,
       imageProduct: `/api/productImagen/${producto.id}`,
-      descuento: 1,
-      precio: 1,
+      descuento: producto.descuento,
+      precio: producto.precio,
     });
   },
 
@@ -69,5 +69,10 @@ module.exports = {
       productDetail,
       error: "No se encontro imagen del producto",
     });
+  },
+  buscador: async (req, res) => {
+    let { search } = req.body;
+    const product = db.Producto.findOne({ where: { nombre: search } });
+    res.status(200).json({ buscado: product });
   },
 };

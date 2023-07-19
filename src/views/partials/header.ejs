@@ -17,8 +17,8 @@
             <ul class="login-menu_list">
                 <% if(locals.isLogged){ %>
                     <li><a class="register-link profile-link" href="/user">
-                        <img src="/images/users/<%=locals.userLogged.img%>" alt="">
-                        <span> Hola <%= locals.userLogged.userName %></span>
+                        <img src="/images/<%=locals.userLogged.img%>" alt="">
+                        <span> Hola <%= locals.userLogged.username %></span>
                     </a></li>
                 <%}else{%>
                     <li><a class="register-link" href="/user/login">Ingresar</a></li>

@@ -10,10 +10,10 @@
     
     <div class="formulario-carga">
         <h1>Formulario de edición</h1>
-        <form action="/product-detail/<%=product.id%>?_method=PUT" method="POST">
+        <form action="/productos-detail/<%=product.id%>?_method=PUT" method="POST">
             <label for="name">
                 Nombre del producto
-                <input type="text" id="name" value="<%=product.productName%>" name="productName">
+                <input type="text" id="name" value="<%=product.nombre%>" name="productName">
             </label>
             <label for="description">
                 Descripción
@@ -21,15 +21,15 @@
             </label>
             <label for="">
                 Caracteristicas
-                <textarea name="characteristics"><%=product.characteristics%></textarea>
+                <textarea name="characteristics"><%=product.description%></textarea>
             </label>
             <label for="">
                 Precio
-                <input value="<%=product.price%>" name="price" type="number">
+                <input value="<%=product.precio%>" name="price" type="number">
             </label>
             <label for="">
                 Descuento
-                <input value="<%=product.discount%>" name="discount" type="number">
+                <input value="<%=product.descuento%>" name="discount" type="number">
             </label>
             <label for="">
                 Categoria

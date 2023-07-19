@@ -10,7 +10,7 @@ const validation = {
         body("characteristics").notEmpty().withMessage("Debe agregar las características del producto"),
         body("price").notEmpty().withMessage("Debe agregar el precio del producto").bail()
         .isInt().withMessage("Debe ingresar valores numéricos"),
-        body("category").notEmpty().withMessage("Debe escoger una categoría"),
+       
         body("img").custom((value, {req}) => 
             {
                 let file = req.file;

@@ -46,11 +46,13 @@
                 <div class="div-boton-añadir">
                     <a href="/carrito"><button class="boton-añadir">Añadir al carrito</button></a>
                 </div>
+                <!--boton de editar los productos-->
                 <div class="btn-eliminar-editar">
-                    <form action="/product-detail/<%= product.id%>?_method=PUT" method="POST">
+                    <form action="/productos-detail/<%= product.id%>?_method=PUT" method="POST">
                         <button class="btn-editar"><a href="/product-detail/<%= product.id%>/edit"> Editar</a></button>
                     </form>
-                    <form action="/product-detail/<%= product.id%>?_method=DELETE" method="POST">
+                 <!--boton de eliminar-->   
+                    <form action="/productos-detail/<%= product.id%>?_method=DELETE" method="POST">
                         <button class="btn-eliminar" type="submit">Eliminar</button>
                     </form>
                 </div>
@@ -63,7 +65,7 @@
            <% let otro = i++;%>
         <section class="barra-siguiente-instrumento">
             <a href="/product-detail/<%=product[otro].id%>"><i class="far fa-arrow-alt-circle-left"></i></a>
-            <h2>Ver otros juegos</h2>
+            <h2>Ver otro instrumento</h2>
             <a href="/product-detail/<%=product[otro].id%>"><i class="far fa-arrow-alt-circle-right"></i></a>
         </section>
         <% }} %>

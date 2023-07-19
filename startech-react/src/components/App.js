@@ -8,7 +8,6 @@ import ContentWrapper from "./ContentWrapper/ContentWrapper";
 import LastMovieInDb from "./LastMovieInDb/LastMovieInDb";
 import ContentRowMovies from "./ContentRowMovies/ContentRowMovies";
 import {ViewUser} from "./userpanel/viewUser";
-
 import Usuario from "./Usuarios/usuarios";
 import { PanelLeft } from "./nav/Nav";
 

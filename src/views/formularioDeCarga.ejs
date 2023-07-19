@@ -9,75 +9,77 @@
     
     <div class="formulario-carga">
         <h1>Formulario de carga</h1>
-        <form action="/product-detail" method="POST" enctype="multipart/form-data">
-            <label for="name">
+        <form action="/productos-detail" method="POST" enctype="multipart/form-data">
+            <label for="productName">
                 Nombre del producto
-                <input type="text" id="name" name="productName" 
-                value="<%= locals.oldData ? oldData.productName : null %>">
-                <% if (locals.errors && errors.productName){ %>
-                <div class="text-danger">
-                    <%= errors.productName.msg %>
-                </div>
+                <input type="text" id="productName" name="productName" value="<%= locals.oldData ? locals.oldData.productName : '' %>">
+                <% if (locals.errors && locals.errors.productName) { %>
+                  <div class="text-danger">
+                    <%= locals.errors.productName.msg %>
+                  </div>
                 <% } %>
             </label>
 
-            <label for="">
+            <label for="description">
                 Descripción
-                <textarea name="description"><%= locals.oldData ? oldData.description : null %></textarea>
-                <% if (locals.errors && errors.description){ %>
-                    <div class="text-danger">
-                        <%= errors.description.msg %>
-                    </div>
-                    <% } %>
+                <textarea id="description" name="description"><%= locals.oldData ? locals.oldData.description : '' %></textarea>
+                <% if (locals.errors && locals.errors.description) { %>
+                  <div class="text-danger">
+                    <%= locals.errors.description.msg %>
+                  </div>
+                <% } %>
             </label>
-            <label for="">
+
+            <label for="characteristics">
                 Características
-                <textarea name="characteristics"><%= locals.oldData ? oldData.characteristics : null %></textarea>
-                <% if (locals.errors && errors.characteristics){ %>
-                    <div class="text-danger">
-                        <%= errors.characteristics.msg %>
-                    </div>
-                    <% } %>
+                <textarea id="characteristics" name="characteristics"><%= locals.oldData ? locals.oldData.characteristics : '' %></textarea>
+                <% if (locals.errors && locals.errors.characteristics) { %>
+                  <div class="text-danger">
+                    <%= locals.errors.characteristics.msg %>
+                  </div>
+                <% } %>
             </label>
-            <label for="">
+
+            <label for="price">
                 Precio
-                <input name="price" type="number"
-                value="<%= locals.oldData ? oldData.price : null %>">
-                <% if (locals.errors && errors.price){ %>
-                    <div class="text-danger">
-                        <%= errors.price.msg %>
-                    </div>
-                    <% } %>
+                <input type="number" id="price" name="price" value="<%= locals.oldData ? locals.oldData.price : '' %>">
+                <% if (locals.errors && locals.errors.price) { %>
+                  <div class="text-danger">
+                    <%= locals.errors.price.msg %>
+                  </div>
+                <% } %>
             </label>
-            <label for="">
+
+            <label for="discount">
                 Descuento
-                <input name="discount" type="number"
-                value="<%= locals.oldData ? oldData.discount : null %>">
+                <input type="number" id="discount" name="discount" value="<%= locals.oldData ? locals.oldData.discount : '' %>">
             </label>
-            <label for="">
-                Categoria
-                <select name="category" id="">
-                    <option value="guitarra">PS3</option>
-                    <option value="Bajos">PS4</option>
-                    <option value="percusion">xbox 360</option>
-                    <option value="cuerdas-frotadas">xbox one</option>
-                    <option value="microfonos">wii</option>
+
+            <label for="clase_id">
+                Clase
+                <select id="clase_id" name="clase_id">
+                    <option value="1">guerra</option>
+                    <option value="2">aventura</option>
+                    <option value="3">terror</option>
+                    <option value="4">hardcore</option>
                 </select>
-                <% if (locals.errors && errors.category){ %>
-                    <div class="text-danger">
-                        <%= errors.category.msg %>
-                    </div>
-                    <% } %>
+                <% if (locals.errors && locals.errors.clase_id) { %>
+                  <div class="text-danger">
+                    <%= locals.errors.clase_id.msg %>
+                  </div>
+                <% } %>
             </label>
-            <label for="">
+
+            <label for="img">
                 Imagen
-            <input name="img" type="file">
-            <% if (locals.errors && errors.img){ %>
-            <div class="text-danger">
-                <p><%= errors.img.msg %></p>
-            </div>
-            <% } %>
+                <input type="file" id="img" name="img">
+                <% if (locals.errors && locals.errors.img) { %>
+                  <div class="text-danger">
+                    <p><%= locals.errors.img.msg %></p>
+                  </div>
+                <% } %>
             </label>
+
             <div class="btn-enviar-carga">
                 <input type="submit" name="Enviar" id="">
             </div>

@@ -13,7 +13,7 @@ const userController = {
   create: (req, res) => {
     res.render("users/formularioCrearUsuario");
   },
-  createPost: (req, res) => {
+  createPost: async (req, res) => {
     //info
     let errorsValidator = validationResult(req);
     let oldData = req.body;
@@ -24,18 +24,14 @@ const userController = {
       });
       console.log(errorsValidator.mapped());
     } else {
-      db.Usuario.create({
+      const imgFileName = req.file ? req.file.filename : '1689545541659_img_.png';
+      await db.Usuario.create({
         username: req.body.userName,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
-        img: req.file ? req.file.filename : "1689545541659_img_.jpg",
+        img: imgFileName
       })
-        .then((user) => {
-          res.redirect("/");
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      res.redirect('/login')
     }
   },
   login: (req, res) => {
@@ -52,20 +48,20 @@ const userController = {
         let userToLog = await db.Usuario.findOne({
           where: { email: req.body.email },
         });
-
+        console.log("Usuario encontrado:", userToLog);
         if (userToLog) {
           let samePassword = await bcrypt.compare(
             req.body.password,
             userToLog.password
           );
-
+          console.log("Contraseña coincidente:", samePassword);
           if (samePassword) {
             req.session.userLogged = userToLog;
-
+  
             if (req.body.recordarme) {
               res.cookie("userEmail", req.body.email, { maxAge: 1000 * 120 });
             }
-
+  
             res.redirect("/user");
           } else {
             res.render("login", {
@@ -86,7 +82,6 @@ const userController = {
           });
         }
       } catch (error) {
-        // Manejar cualquier error de la base de datos
         console.error(error);
         res.render("login", {
           errors: {

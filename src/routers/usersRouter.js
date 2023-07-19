@@ -4,34 +4,31 @@ const multer = require("multer");
 const path = require("path");
 const userController = require("../controllers/usersController");
 
-let storage = multer.diskStorage({
-    destination: function (req, file, cb){
-        cb(null, "./public/images/users");
-    },
-    filename: function(req,file,cb){
-        cb(null,`${Date.now()}_img_${path.extname(file.originalname)}`)
-    }
-})
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/images/");
+  },
+  filename: function (req, file, cb) {
+    const ext = path.extname(file.originalname);
+    const fileName = `${Date.now()}_img_${ext}`;
+    cb(null, fileName);
+  },
+});
 
-//middleware
-const upload = multer({ storage })
-const validation = require("../middlewares/validator");
-const usuarioLogueado = require("../middlewares/usuarioLogueado");
-const usuarioNoLogueado = require("../middlewares/usuarioNoLogueado");
-const signupValidator = require("../middlewares/signupValidator");
-//profile
-router.get("/", usuarioNoLogueado,userController.index)
+const upload = multer({ storage });
 
-//creación de usuario
-router.get("/create",usuarioLogueado, userController.create);
-router.post("/create",upload.single("img"), signupValidator,userController.createPost);
+// Profile
+router.get("/", userController.index);
 
-//login
-router.get("/login", usuarioLogueado, userController.login)
-router.post("/login", validation , userController.loginProcess)
+// Creación de usuario
+router.get("/create", userController.create);
+router.post("/create", upload.single("img"), userController.createPost);
 
-//logout
-router.get("/logout", userController.logout)
+// Login
+router.get("/login", userController.login);
+router.post("/login", userController.loginProcess);
 
-module.exports = router
+// Logout
+router.get("/logout", userController.logout);
 
+module.exports = router;

@@ -38,12 +38,12 @@ router.get("/login", mainController.login);
 router.get("/create",mainController.cargaGet);
 
 
-router.post("/product-detail",upload.single("img"), validation.createValidation ,mainController.addDetails);
+router.post("/productos-detail",upload.single("img"), validation.createValidation ,mainController.addDetails);
 
-router.get("/product-detail/:id/edit", mainController.edit)
-router.put("/product-detail/:id", mainController.update)
+router.get("/productos-detail/:id/edit", mainController.edit)
+router.put("/productos-detail/:id", mainController.update)
 
-router.delete("/product-detail/:id",mainController.destroy)
+router.delete("/productos-detail/:id",mainController.destroy)
 
 
 

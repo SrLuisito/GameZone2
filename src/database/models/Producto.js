@@ -19,24 +19,24 @@ module.exports = function (sequelize, DataTypes) {
     img: {
       type: DataTypes.TEXT,
     },
-    clase_id: {
-      type: DataTypes.INTEGER,
+    category: {
+      type: DataTypes.STRING,
     },
   };
 
   let config = {
-    tablename: "productos",
+    tableName: "productos", // Corrige el nombre de la tabla
     timestamps: false,
   };
 
   let Producto = sequelize.define(alias, col, config);
 
-  Producto.associate = function (models) {
-    Producto.belongsTo(models.Clase, {
-      foreignKey: "clase_id",
-      as: "clase",
-    });
-  };
+  // Producto.associate = function (models) {
+  //   Producto.belongsTo(models.Clase, {
+  //     foreignKey: "clase_id",
+  //     as: "clases",
+  //   });
+  // };
 
   return Producto;
 };
